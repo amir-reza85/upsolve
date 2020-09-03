@@ -135,7 +135,7 @@ function submit() {
         link += a[x]
     }
     createCookie("body", "", -300);
-    body = '<head><link rel="stylesheet" type="text/css" href="/style.css"><title>UpSolve</title></head><h3><div class="w3-bar w3-black w3-card" ><br><a href="/" class="w3-bar-item">UpSolve</a>&nbsp;&nbsp;<a href="/cf" class="w3-bar-item">CodeForces</a>&nbsp;&nbsp;<a href="/ac" class="w3-bar-item">AtCoder</a>&nbsp;&nbsp;<a href="/contests/create" class="w3-bar-item">Create New Contest</a>&nbsp;&nbsp;<font id="hi" class="w3-bar-item"></font><font id="username" class="w3-bar-item"><a href="/login">Login</a></font>&nbsp;&nbsp;<font id="logout" class="w3-bar-item"></font><br></div></h3>'
+    body = '<head><link rel="stylesheet" type="text/css" href="/style.css"><title>UpSolve</title></head><h3><div class="w3-bar w3-black w3-card" ><br><a href="/" class="w3-bar-item">UpSolve</a>&nbsp;&nbsp;<a href="/cf" class="w3-bar-item">CodeForces</a>&nbsp;&nbsp;<a href="/ac" class="w3-bar-item">AtCoder</a>&nbsp;&nbsp;<a href="/contests/create" class="w3-bar-item">Create New Contest</a>&nbsp;&nbsp;<font id="hi" class="w3-bar-item"></font><font id="username" class="w3-bar-item"><a href="/login">Login</a></font>&nbsp;&nbsp;<font id="logout" class="w3-bar-item"></font><br></div></h3><br>'
     body += " <br> Created by : "
     var handle = window.localStorage.getItem('cf')
     if (handle == undefined || handle == "undefined" || handle == -1 || handle == null || handle == '<a href="/login"> Login </a>') {
