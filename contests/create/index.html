@@ -1,0 +1,43 @@
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title> UpSolve </title>
+    <script src="create.js"> </script>
+</head>
+<body>
+    <h3>
+    <div class="w3-bar w3-black w3-card" style="background-color: blue;">
+        <br>
+    <a href="/" class="w3-bar-item">UpSolve</a> &nbsp; &nbsp;
+    <a href="/cf" class="w3-bar-item">  CodeForces  </a>  &nbsp; &nbsp;
+    <a href="/ac" class="w3-bar-item">  AtCoder  </a>  &nbsp; &nbsp;
+    <a href="/contests/create" class="w3-bar-item">  Create New Contest  </a>  &nbsp; &nbsp;
+    <font id='hi' class="w3-bar-item"></font>
+    <font id='username' class="w3-bar-item"><a href='/login'> Login </a></font> &nbsp; &nbsp;
+    <font id='logout' class="w3-bar-item"></font>   
+        <script src="/js.js"> </script>
+    &nbsp; <br>&nbsp; 
+  </div>
+    </h3>
+<script src="create.js"> </script>
+<div>
+    <h3>
+  Leave Contest and index empty for random (only cf support)
+<br>
+  Leave rate empty for custom
+    <br>
+        </h3>
+        <div id="problems"> 
+        <h4> <pre> | platform |        |   rate   |     | contest id |        | index | </pre> </h4>
+  <input id="plat1" type="text" placeholder="cf | ac"> &nbsp;
+  <input id="rate1" type="text" placeholder="rate : e.g. 1000"> &nbsp;
+  <input id="contest1" type="text" placeholder="contest:e.g. 1234,abc166"> &nbsp;&nbsp;
+  <input id="index1" type="text" placeholder="index : e.g. a , b">  &nbsp; 
+    </div>
+  <button onclick="add()"> Add new problem </button> <br>
+  <button onclick="submit()"> Submit Contest </button>
+</div>
+</body>
+</html>
+<script> start() </script>
