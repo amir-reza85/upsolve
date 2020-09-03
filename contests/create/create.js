@@ -134,7 +134,8 @@ function submit() {
         var x = Math.floor(Math.random() * 36);
         link += a[x]
     }
-    body = '<html> <head><link rel="stylesheet" type="text/css" href="/style.css"><title> UpSolve </title></head><h3>    <div class="w3-bar w3-black w3-card" style="background-color: blue;"><br><a href="/" class="w3-bar-item">UpSolve</a> &nbsp; &nbsp;<a href="/cf" class="w3-bar-item">  CodeForces  </a>  &nbsp; &nbsp;    <a href="/ac" class="w3-bar-item">  AtCoder  </a>  &nbsp; &nbsp;    <a href="/contests/create" class="w3-bar-item">  Create New Contest  </a>  &nbsp; &nbsp;    <font id="hi" class="w3-bar-item"></font>    <font id="username" class="w3-bar-item"><a href="/login"> Login </a></font> &nbsp; &nbsp;    <font id="logout" class="w3-bar-item"></font>           <script src="/js.js"> </script>    &nbsp; <br>&nbsp;   </div>    </h3> </html>'
+    createCookie("body", "", -300);
+    body = '<head><link rel="stylesheet" type="text/css" href="/style.css"><title>UpSolve</title></head><h3><div class="w3-bar w3-black w3-card" ><br><a href="/" class="w3-bar-item">UpSolve</a>&nbsp;&nbsp;<a href="/cf" class="w3-bar-item">CodeForces</a>&nbsp;&nbsp;<a href="/ac" class="w3-bar-item">AtCoder</a>&nbsp;&nbsp;<a href="/contests/create" class="w3-bar-item">Create New Contest</a>&nbsp;&nbsp;<font id="hi" class="w3-bar-item"></font><font id="username" class="w3-bar-item"><a href="/login">Login</a></font>&nbsp;&nbsp;<font id="logout" class="w3-bar-item"></font><br></div></h3>'
     body += " <br> Created by : "
     var handle = window.localStorage.getItem('cf')
     if (handle == undefined || handle == "undefined" || handle == -1 || handle == null || handle == '<a href="/login"> Login </a>') {
@@ -142,14 +143,14 @@ function submit() {
     }else {
         body += handle
     }
-    body += "<br><table> <tr> <th> Number </th> <th> Problem </th> </tr>"
+    body += "<br><table><tr><th>Number</th><th>Problem</th></tr>"
     f = 1;
     a = []
     b = []
     c = []
     d = []
     for (var i = 1; i <= num; i++) {
-        body += '<tr id="pro' + i + '"> <td>' + i + '</td> <td>';
+        body += '<tr id="pro' + i + '"><td>' + i + '</td><td>';
         var plat = document.getElementById('plat' + i).value;
         var contest =  document.getElementById('contest' + i).value;
         var index =  document.getElementById('index' + i).value;
@@ -181,8 +182,6 @@ function submit() {
         alert('something is wrong please with your inputs check again')
         return;
     }
-    
-    body += "<p hidden>"
     for (var i = 1; i <= num; i++) {
         body += "<p hidden id='plat" + i + "'>"
         body += a[i - 1]
@@ -194,11 +193,8 @@ function submit() {
         body += c[i - 1]
         body += "</p>"
     }
-    body += "</p>"
-    body += '<script src="/js.js"> </script>'
-    body += '<script> start() </script>'
-    if (body !== '<script> start() </script> <html> <head><link rel="stylesheet" type="text/css" href="/style.css"><title> UpSolve </title><script src="create.js"> </script></head><h3>    <div class="w3-bar w3-black w3-card" style="background-color: blue;"><br><a href="/" class="w3-bar-item">UpSolve</a> &nbsp; &nbsp;<a href="/cf" class="w3-bar-item">  CodeForces  </a>  &nbsp; &nbsp;    <a href="/ac" class="w3-bar-item">  AtCoder  </a>  &nbsp; &nbsp;    <a href="/contests/create" class="w3-bar-item">  Create New Contest  </a>  &nbsp; &nbsp;    <font id="hi" class="w3-bar-item"></font>    <font id="username" class="w3-bar-item"><a href="/login"> Login </a></font> &nbsp; &nbsp;    <font id="logout" class="w3-bar-item"></font>           <script src="/js.js"> </script>    &nbsp; <br>&nbsp;   </div>    </h3> </html>')
-  createCookie("body", body, "100000");
-
+    body += '<script src="/js.js"></script>'
+    body += '<script>start()</script>'
+  createCookie("body", body, 1);
 window.location.replace("create.php?link=" + link);
 }
