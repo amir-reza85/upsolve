@@ -6,8 +6,6 @@ I am happy to introduce New Website named [UpSolve](http://upsolve.rf.gd) .
 
 **[UpSolve.rf.gd](http://upsolve.rf.gd)**
 
-EveryThing is in [Github](https://github.com/amir-reza85/UpSolve)
-
 Features :  <br>
 &nbsp; 1. comment section <br>
 &nbsp; 2. show all **unsolved** problems of some rate <br>
