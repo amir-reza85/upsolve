@@ -1,6 +1,6 @@
 # upsolve
 
-Hello CodeForces.
+Hello.
 
 I am happy to introduce New Website named [UpSolve](http://upsolve.rf.gd) .
 
